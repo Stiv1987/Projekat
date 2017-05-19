@@ -1,0 +1,67 @@
+import acm.program.*;
+
+public class SocialNetwork extends ConsoleProgram {
+	
+	private static final int MAX_NUM = 20;
+	private static final int MIN_NUM = 1;
+	
+	public void run () {
+		println ("THIS PROGRAM READS INFORMATION ABOUT 20 PEOPLE IN THE GROUP.");
+		int id = readInt("Enter some ID number from " + MIN_NUM + " to " + MAX_NUM + "; or some number outside of this range to quit: ");
+		while (id <= MAX_NUM && id >= MIN_NUM){
+		println(people(id));
+		id = readInt ("Enter next ID: ");
+		}
+		println ("Thank you for participating.");
+		}
+	
+	
+	private String people (int x) {
+		switch (x){
+		case 1: return ONE + ", Friends are <> " + TWO;
+		case 2: return TWO + ", Friends are <> " + ONE + "// " + THREE;
+		case 3: return THREE + ", Friends are <> " + TWO + "// " + FOUR + "// " + FIVE + "// " + SEVEN; 
+		case 4: return FOUR + ", Friends are <> " + THREE;
+		case 5: return FIVE + ", Friends are <> " + THREE + "// " + SIX + "// " + ELEVEN + "// " + TEN + "// " + SEVEN;
+		case 6: return SIX + ", Friends are <> " + FIVE;
+		case 7: return SEVEN + ", Friends are <> " + THREE + "// " + FIVE + "// " + TWENTY + "// " + TWELVE + "// " + EIGHT;
+		case 8: return EIGHT + ", Friends are <> " + SEVEN;
+		case 9: return NINE + ", Friends are <> " + TWELVE;
+		case 10: return TEN + ", Friends are <> " + FIVE + "// " + ELEVEN;
+		case 11: return ELEVEN + ", Friends are <> " + FIVE + "// " + TEN + "// " + NINETEEN + "// " + TWENTY;
+		case 12: return TWELVE + ", Friends are <> " + SEVEN + "// " + NINE + "// " + THIRTEEN + "// " + TWENTY;
+		case 13: return THIRTEEN + ", Friends are <> " + TWELVE + "// " + FOURTEEN + "// " + TWENTY;
+		case 14: return FOURTEEN + ", Friends are <> " + THIRTEEN + "// " + FIFTEEN;
+		case 15: return FIFTEEN + ", Friends are <> " + FOURTEEN;
+		case 16: return SIXTEEN + ", Friends are <> " + EIGHTEEN + "// " + TWENTY;
+		case 17: return SEVENTEEN + ", Friends are <> " + EIGHTEEN + "// " + TWENTY;
+		case 18: return EIGHTEEN + ", Friends are <> " + SEVENTEEN;
+		case 19: return NINETEEN + ", Friends are <> " + ELEVEN + "// " + TWENTY;
+		case 20: return TWENTY + ", Friends are <> " + SEVEN + "// " + ELEVEN + "// " + TWELVE + "// " + THIRTEEN + "// " + SIXTEEN + "// " + SEVENTEEN + "// " + NINETEEN;
+		default: return null;
+		}
+	
+	}
+	
+	private static final String ONE = "First Name: PAUL, Surname: CROWE, Age: 28, Gender: MALE ";
+	private static final String TWO = "First Name: ROB, Surname: FITZ, Age: 23, Gender: MALE ";
+	private static final String THREE = "First Name: BEN, Surname: O'CAROLAN, Gender: MALE ";
+	private static final String FOUR = "First Name: VICTOR, Age: 28, Gender: MALE ";
+	private static final String FIVE = "First Name: PETER, Surname: MAC, Age: 29, Gender: MALE ";
+	private static final String SIX = "First Name: JOHN, Surname: BARY, Age: 18, Gender: MALE ";
+	private static final String SEVEN = "First Name: SARAH, Surname: LANE, Age: 30, Gender: FEMALE ";
+	private static final String EIGHT = "First Name: SUSAN, Surname: DOWNE, Age: 28, Gender: FEMALE ";
+	private static final String NINE = "First Name: JACK, Surname: STAM, Age: 28, Gender: MALE ";
+	private static final String TEN = "First Name: AMY, Surname: LANE, Age: 24, Gender: FEMALE ";
+	private static final String ELEVEN = "First Name: SANDRA, Surname: PHELAN, Age: 28, Gender: FEMALE ";
+	private static final String TWELVE = "First Name: LAURA, Surname: MURPHY, Age: 33, Gender: FEMALE ";
+	private static final String THIRTEEN = "First Name: LISA, Surname:  DALY, Age: 28, Gender: FEMALE ";
+	private static final String FOURTEEN = "First Name: MARK, Surname: JOHNSON, Age: 28, Gender: MALE ";
+	private static final String FIFTEEN = "First Name: SEAMUS, Surname: CROWE, Age: 24, Gender: MALE ";
+	private static final String SIXTEEN = "First Name: DAREN, Surname: SLATER, Age: 28, Gender: MALE ";
+	private static final String SEVENTEEN = "First Name: DARA, Surname: ZOLTAN, Age: 48, Gender: MALE ";
+	private static final String EIGHTEEN = "First Name: MARIE, Surname: D, Age: 28, Gender: FEMALE ";
+	private static final String NINETEEN = "First Name: CATRIONA, Surname: LONG, Age: 28, Gender: FEMALE ";
+	private static final String TWENTY = "First Name:KATY, Surname: COUCH, Age:28, Gender: FEMALE ";
+	
+	}
